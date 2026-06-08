@@ -1,2 +1,6 @@
 # Intel-Portfolio-Website
 Sleek, interactive webpage that highlights Intel’s sustainability goals in a timeline format.
+Recreating the intel website with proper images & Spacing. Plus adaptation for right to left languages such as "arabic": Also accessibility practices "subscription from where users can sign up for our sustainability news letter. 
+
+Create A New Webstie starting from the ground up " Nav Bar, "Glowing Intel Logo, 6 Boxes With generated images and descriptions. Footer with correct spacing as well. "In between footer and descirptions/images place the "Learn More" section that'll lead to the news letter where people input there first, last name & email. With a small description within the form explaining the news letter and "why" 
+Use "bootstrap" and possibly tailwinds to create this. MAKE IT FUNCTIONAL AND CLEAN, I want proper spacing, as well as adapting it for right to left languages such as "arabic". Lastly I want you to make sure you use tools like bootstrap to gather proper css and html from as need be. 

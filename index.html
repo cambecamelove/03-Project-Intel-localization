@@ -3,108 +3,65 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Intel Sustainability Timeline</title>
+
+  <title>Intel Website</title>
+
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-  <header class="navbar">
-    <div class="arc-logo">
-      <span class="intel-text">intel</span>
-      <span class="arc-text">ARC</span>
-    </div>
+ <nav class="navbar">
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="#newsletter" class="nav-link">Learn More</a>
+</nav>
 
-    <nav>
-      <a href="#timeline">Learn More</a>
-    </nav>
-  </header>
+<section class="hero">
+  <div class="intel-logo-wrap">
+    <div class="lightning-line"></div>
+    <h1 class="intel-logo">INTEL</h1>
+  </div>
+</section>
 
-  <main class="hero">
+<section class="timeline-section">
 
-    <div class="glow glow-one"></div>
-    <div class="glow glow-two"></div>
+  <div class="timeline-grid">
 
-    <section class="hero-center">
-      <p class="small-title">SUSTAINABILITY THROUGH THE AGES</p>
+    <img src="img/1968 cropped ps.png" alt="1968 Intel Founded" class="timeline-card" />
 
-      <h1 class="intel-burst">INTEL</h1>
+    <img src="img/1971 cropped ps.png" alt="1971 First Microprocessor" class="timeline-card" />
 
-      <p class="hero-message">
-        Explore Intel's journey through time, innovation, and sustainability.
-      </p>
-    </section>
+    <img src="img/1978 cropped ps.png" alt="1978 8086 Processor" class="timeline-card" />
 
-    <section class="timeline web-timeline" id="timeline">
+    <img src="img/2000s cropped ps.png" alt="2000s Efficiency Focus" class="timeline-card" />
 
-      <article class="timeline-card card-one">
-        <div class="bolt"></div>
-        <h2>1968</h2>
-        <h3>Intel Founded</h3>
-        <p>Intel begins its journey as a technology company focused on innovation.</p>
-      </article>
+    <img src="img/2020s cropped ps.png" alt="2020s Climate Goals" class="timeline-card" />
 
-      <article class="timeline-card card-two">
-        <div class="bolt"></div>
-        <h2>1971</h2>
-        <h3>First Microprocessor</h3>
-        <p>The first microprocessor helped change the future of computing.</p>
-      </article>
+    <img src="img/2020plus cropped ps.png" alt="Future Cleaner Innovation" class="timeline-card" />
 
-      <article class="timeline-card card-three">
-        <div class="bolt"></div>
-        <h2>1978</h2>
-        <h3>8086 Processor</h3>
-        <p>The 8086 processor helped power a new generation of personal computers.</p>
-      </article>
+  </div>
 
-      <article class="timeline-card card-four">
-        <div class="bolt"></div>
-        <h2>2000s</h2>
-        <h3>Efficiency Focus</h3>
-        <p>Intel improves performance while focusing on energy efficiency.</p>
-      </article>
+</section>
 
-      <article class="timeline-card card-five">
-        <div class="bolt"></div>
-        <h2>2020s</h2>
-        <h3>Climate Goals</h3>
-        <p>Intel expands sustainability goals across manufacturing and technology.</p>
-      </article>
+<section id="newsletter" class="newsletter-section">
 
-      <article class="timeline-card card-six">
-        <div class="bolt"></div>
-        <h2>Future</h2>
-        <h3>Cleaner Innovation</h3>
-        <p>Intel works toward a more sustainable future for technology and the planet.</p>
-      </article>
+  <form class="newsletter-form">
+    <h1>Newsletter</h1>
 
-    </section>
+    <p class="newsletter-text">
+      Subscribe to receive updates about Intel’s sustainability journey, technology goals,
+      and future innovation.
+    </p>
 
-  </main>
+    <input type="text" placeholder="First Name" required />
+    <input type="text" placeholder="Last Name" required />
+    <input type="email" placeholder="Email" required />
 
-  <footer class="footer">
-    <div class="footer-links">
-      <a href="#">Support</a>
-      <a href="#">Company Overview</a>
-      <a href="#">Public Policy</a>
-      <a href="#">Careers</a>
-    </div>
+    <button type="submit">Subscribe</button>
+  </form>
 
-    <div class="footer-brand">
-      <div class="wide-logo">
-        <span>INTEL</span>
-        <strong>SUSTAINS</strong>
-      </div>
-
-      <div class="socials">
-        <span>𝕏</span>
-        <span>in</span>
-        <span>▶</span>
-        <span>◎</span>
-      </div>
-    </div>
-  </footer>
-
+</section>
+<footer class="footer">
+  <p>© 2026 Intel Sustainability Project. All rights reserved.</p>
+</footer>
 </body>
 </html>
