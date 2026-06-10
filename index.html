@@ -18,7 +18,7 @@
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
   />
 
-  <!-- Your custom CSS stays last -->
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -31,7 +31,7 @@
   </nav>
 
   <!-- Hero / Intel Logo -->
-  <section class="hero">
+  <section class="hero" aria-label="Intel hero section">
     <div class="intel-logo-wrap">
       <div class="lightning-line"></div>
       <h1 class="intel-logo">INTEL</h1>
@@ -40,52 +40,49 @@
 
   <!-- Timeline Section -->
   <section class="timeline-section" aria-label="Intel sustainability timeline">
-
     <div class="timeline-grid">
 
       <img
         src="img/1968 cropped ps.png"
-        alt="1968 Intel Founded"
+        alt="1968: Intel founded as a technology company focused on innovation."
         class="timeline-card"
       />
 
       <img
         src="img/1971 cropped ps.png"
-        alt="1971 First Microprocessor"
+        alt="1971: Intel introduces the first microprocessor."
         class="timeline-card"
       />
 
       <img
         src="img/1978 cropped ps.png"
-        alt="1978 8086 Processor"
+        alt="1978: Intel 8086 processor helps power a new generation of personal computers."
         class="timeline-card"
       />
 
       <img
         src="img/2000s cropped ps.png"
-        alt="2000s Efficiency Focus"
+        alt="2000s: Intel focuses on energy efficiency and improved performance."
         class="timeline-card"
       />
 
       <img
         src="img/2020s cropped ps.png"
-        alt="2020s Climate Goals"
+        alt="2020s: Intel expands sustainability goals across manufacturing and technology."
         class="timeline-card"
       />
 
       <img
         src="img/2020plus cropped ps.png"
-        alt="Future Cleaner Innovation"
+        alt="Future: Intel works toward cleaner innovation and a more sustainable future."
         class="timeline-card"
       />
 
     </div>
-
   </section>
 
   <!-- Global Three-Column Section -->
   <section class="global-section" aria-label="Intel global sustainability focus">
-
     <div class="container">
       <div class="row g-4">
 
@@ -136,12 +133,106 @@
 
       </div>
     </div>
+  </section>
 
+  <!-- Interactive Bootstrap Accordion Section -->
+  <section class="interactive-section" aria-label="Sustainability details accordion">
+    <div class="container">
+
+      <div class="interactive-header">
+        <p class="section-label">Explore More</p>
+
+        <h2>Intel Sustainability Details</h2>
+
+        <p>
+          Learn more about Intel’s global goals, accessibility focus, and localization support.
+        </p>
+      </div>
+
+      <div class="accordion intel-accordion" id="sustainabilityAccordion">
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne">
+              How does Intel support sustainability?
+            </button>
+          </h2>
+
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            aria-labelledby="headingOne"
+            data-bs-parent="#sustainabilityAccordion">
+            <div class="accordion-body">
+              Intel supports sustainability through water conservation, waste reduction,
+              responsible manufacturing, and cleaner technology goals.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo">
+              Why does localization matter?
+            </button>
+          </h2>
+
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#sustainabilityAccordion">
+            <div class="accordion-body">
+              Localization helps global audiences use the website naturally by supporting
+              different languages, reading directions, and accessible layouts.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree">
+              How is this page accessible?
+            </button>
+          </h2>
+
+          <div
+            id="collapseThree"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingThree"
+            data-bs-parent="#sustainabilityAccordion">
+            <div class="accordion-body">
+              This page includes semantic sections, descriptive image alt text,
+              form labels, keyboard-friendly links, Bootstrap components, and RTL support
+              for right-to-left languages.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </section>
 
   <!-- Newsletter Section -->
   <section id="newsletter" class="newsletter-section">
-
     <form class="newsletter-form" aria-label="Newsletter signup form">
       <h1>Newsletter</h1>
 
@@ -179,7 +270,6 @@
 
       <button type="submit">Subscribe</button>
     </form>
-
   </section>
 
   <!-- Footer -->
@@ -187,34 +277,42 @@
     <p>© 2026 Intel Sustainability Project. All rights reserved.</p>
   </footer>
 
-  <!-- RTL language detection script -->
+  <!-- Bootstrap JavaScript Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Auto-detect RTL language support -->
   <script>
-    function updateDirection() {
+    function updatePageDirection() {
       const rtlLanguages = ["ar", "fa", "ur", "he"];
       const html = document.documentElement;
+      const body = document.body;
 
-      const currentLang =
+      const pageLanguage =
         html.getAttribute("lang") ||
-        document.body.getAttribute("lang") ||
+        body.getAttribute("lang") ||
         navigator.language ||
         "en";
 
-      const shortLang = currentLang.slice(0, 2).toLowerCase();
+      const shortLanguage = pageLanguage.slice(0, 2).toLowerCase();
 
-      if (rtlLanguages.includes(shortLang)) {
+      const googleTranslateRTL =
+        body.classList.contains("translated-rtl") ||
+        html.classList.contains("translated-rtl");
+
+      if (rtlLanguages.includes(shortLanguage) || googleTranslateRTL) {
         html.setAttribute("dir", "rtl");
       } else {
         html.setAttribute("dir", "ltr");
       }
     }
 
-    updateDirection();
+    updatePageDirection();
 
-    const observer = new MutationObserver(updateDirection);
+    const observer = new MutationObserver(updatePageDirection);
 
     observer.observe(document.documentElement, {
       attributes: true,
-      attributeFilter: ["lang"]
+      attributeFilter: ["lang", "class"]
     });
 
     observer.observe(document.body, {

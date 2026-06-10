@@ -75,6 +75,7 @@ body {
 }
 
 .nav-link:hover {
+  color: var(--intel-text-primary);
   transform: scale(1.08);
 }
 
@@ -241,13 +242,8 @@ body {
   justify-content: center;
 }
 
-.global-grid {
-  width: 100%;
+.global-section .container {
   max-width: 1050px;
-
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 35px;
 }
 
 .global-card {
@@ -315,8 +311,90 @@ body {
 }
 
 .global-btn:hover {
+  color: var(--intel-bg-dark);
   transform: scale(1.05);
   box-shadow: 0 0 24px rgba(255, 255, 255, 0.22);
+}
+
+/* Interactive Bootstrap Accordion Section */
+.interactive-section {
+  padding: 60px 70px 45px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.interactive-section .container {
+  max-width: 1050px;
+}
+
+.interactive-header {
+  max-width: 720px;
+  margin: 0 auto 35px;
+
+  text-align: center;
+}
+
+.section-label {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--intel-brand);
+  margin-bottom: 10px;
+}
+
+.interactive-header h2 {
+  font-size: 38px;
+  margin-bottom: 14px;
+  color: var(--intel-text-primary);
+}
+
+.interactive-header p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.intel-accordion {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.intel-accordion .accordion-item {
+  background: rgba(0, 15, 40, 0.45);
+  border: 1px solid rgba(97, 152, 255, 0.22);
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 18px;
+  box-shadow: 0 18px 40px rgba(0, 15, 40, 0.32);
+}
+
+.intel-accordion .accordion-button {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+
+  color: var(--intel-text-primary);
+  background: rgba(6, 27, 61, 0.95);
+  box-shadow: none;
+}
+
+.intel-accordion .accordion-button:not(.collapsed) {
+  color: var(--intel-bg-dark);
+  background: var(--intel-brand);
+}
+
+.intel-accordion .accordion-button:focus {
+  border-color: var(--intel-accent-light);
+  box-shadow: 0 0 0 4px rgba(97, 152, 255, 0.22);
+}
+
+.intel-accordion .accordion-body {
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.82);
+  background: rgba(0, 15, 40, 0.45);
 }
 
 /* Newsletter section */
@@ -443,13 +521,21 @@ html[dir="rtl"] .navbar {
   direction: rtl;
 }
 
-html[dir="rtl"] .timeline-grid,
-html[dir="rtl"] .global-grid {
+html[dir="rtl"] .timeline-grid {
   direction: rtl;
 }
 
 html[dir="rtl"] .global-card {
   align-items: flex-end;
+  text-align: right;
+}
+
+html[dir="rtl"] .interactive-header,
+html[dir="rtl"] .intel-accordion {
+  text-align: right;
+}
+
+html[dir="rtl"] .accordion-button {
   text-align: right;
 }
 
@@ -493,13 +579,12 @@ html[dir="rtl"] .newsletter-form button {
     padding: 70px 35px 55px;
   }
 
-  .global-grid {
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-
   .global-card {
     min-height: auto;
+  }
+
+  .interactive-section {
+    padding: 55px 35px 40px;
   }
 }
 
@@ -554,6 +639,22 @@ html[dir="rtl"] .newsletter-form button {
 
   .global-icon {
     font-size: 38px;
+  }
+
+  .interactive-section {
+    padding: 45px 22px 35px;
+  }
+
+  .interactive-header h2 {
+    font-size: 30px;
+  }
+
+  .interactive-header p {
+    font-size: 16px;
+  }
+
+  .intel-accordion .accordion-button {
+    font-size: 16px;
   }
 
   .newsletter-section {
